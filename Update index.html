@@ -1,321 +1,167 @@
 
-
 <!DOCTYPE html>
-
 <html lang="ru">
-
 <head>
-
 <meta charset="UTF-8">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>IBRATON — Digital Ecosystem</title>
-
 <style>
-
 *{box-sizing:border-box;margin:0;padding:0}
-
 html{scroll-behavior:smooth}
-
 body{background:#090909;color:#f5f1e7;font-family:Arial,sans-serif}
-
 header{padding:20px 6%;display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap;border-bottom:1px solid #342819;background:#0c0b09}
-
 .logo{font-size:27px;font-weight:900;letter-spacing:3px;color:#e0b45c}
-
 nav{display:flex;gap:18px;flex-wrap:wrap}
-
 nav a{color:#ddd;text-decoration:none;font-size:14px}
-
 nav a:hover{color:#e0b45c}
-
 select{background:#17140f;color:#e0b45c;border:1px solid #80612e;padding:11px;border-radius:6px}
-
 .hero{padding:100px 8%;background:radial-gradient(ellipse at 75% 25%,#493719 0%,#17130d 35%,#090909 75%)}
-
 .tag{color:#d9ad54;letter-spacing:4px;font-size:12px}
-
 h1{font-size:clamp(40px,8vw,76px);margin:24px 0;max-width:850px;line-height:1.08}
-
 .gold{color:#d9ad54}
-
 .hero p{color:#aaa;max-width:600px;line-height:1.8}
-
 .btn{display:inline-block;margin-top:24px;padding:14px 23px;background:#d9ad54;color:#111;text-decoration:none;font-weight:bold;border:0;cursor:pointer;border-radius:4px}
-
 section{padding:70px 8%}
-
 h2{font-size:34px;margin-bottom:14px}
-
 .sub{color:#999;margin-bottom:30px;line-height:1.7}
-
 .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
-
 .card{background:#14120e;border:1px solid #44351f;padding:27px;border-radius:12px}
-
 .card h3{color:#e0b65f;margin-bottom:13px}
-
 .card p{color:#aaa;line-height:1.7;font-size:14px}
-
 .card button{margin-top:18px;background:transparent;color:#e0b65f;border:1px solid #a17b36;padding:10px 16px;cursor:pointer}
-
 .panel{background:#17140f;border:1px solid #584321;border-radius:14px;padding:28px;max-width:650px}
-
 .balance{font-size:38px;color:#e0b65f;margin:18px 0}
-
 .notice{color:#d9ad54;font-size:12px;margin-top:20px;line-height:1.7}
-
 footer{padding:35px 8%;border-top:1px solid #302719;color:#777;font-size:13px;line-height:1.8}
-
 @media(max-width:600px){header{align-items:flex-start;flex-direction:column}nav{gap:12px}.hero{padding:65px 7%}section{padding:55px 7%}}
-
 </style>
-
 </head>
-
 <body>
-
 <header>
-
 <div class="logo">IBRATON<span class="gold">.</span></div>
-
 <nav>
-
 <a href="#home" data-i="home">Главная</a>
-
 <a href="#ecosystem" data-i="ecosystem">Экосистема</a>
-
 <a href="#market" data-i="market">Market</a>
-
 <a href="#wallet" data-i="wallet">Wallet</a>
-
 <a href="#account" data-i="account">Профиль</a>
-
 </nav>
-
 <select id="language" aria-label="Language">
-
 <option value="ru">🇷🇺 Русский</option>
-
 <option value="az">🇦🇿 Azərbaycan</option>
-
 <option value="kk">🇰🇿 Қазақша</option>
-
 <option value="en">🇬🇧 English</option>
-
 </select>
-
 </header>
 
 <div class="hero" id="home">
-
 <div class="tag">THE DIGITAL ECOSYSTEM</div>
-
 <h1 data-i="headline">Новая эпоха <span class="gold">цифровых</span> возможностей.</h1>
-
 <p data-i="intro">IBRATON — концепция универсальной цифровой экосистемы, объединяющей инструменты, технологии и сообщества на одной платформе.</p>
-
 <a class="btn" href="#ecosystem" data-i="explore">Исследовать платформу</a>
-
 </div>
 
 <section id="ecosystem">
-
 <h2 data-i="ecoTitle">Экосистема <span class="gold">IBRATON</span></h2>
-
 <p class="sub" data-i="ecoSub">Четыре направления единой цифровой среды.</p>
-
 <div class="grid">
-
 <div class="card"><h3>IBR Tools</h3><p data-i="toolsText">Цифровые инструменты и полезные сервисы в одном пространстве.</p></div>
-
 <div class="card" id="wallet"><h3>IBR Wallet</h3><p data-i="walletText">Демонстрационный интерфейс виртуального баланса и истории операций.</p></div>
-
 <div class="card"><h3>IBR Market</h3><p data-i="marketText">Концепция цифрового каталога и торговой площадки.</p></div>
-
 <div class="card"><h3>IBR Connect</h3><p data-i="connectText">Идея объединения пользователей и цифровых сообществ.</p></div>
-
 </div>
-
 </section>
 
 <section id="market">
-
 <h2>IBR <span class="gold">Market</span></h2>
-
 <p class="sub" data-i="marketSub">Демонстрация будущей торговой площадки.</p>
-
 <div class="grid">
-
 <div class="card"><h3>Digital Assets</h3><p data-i="assetsText">Каталог цифровых продуктов — демонстрационный раздел.</p></div>
-
 <div class="card"><h3>Exchange Concept</h3><p data-i="exchangeText">Концепция интерфейса обмена виртуальных баллов.</p></div>
-
 <div class="card"><h3>Global Payments</h3><p data-i="paymentsText">Идея поддержки разных валют в будущем. Реальные платежи не подключены.</p></div>
-
 </div>
-
 </section>
 
 <section id="account">
-
 <h2 data-i="profileTitle">Личный кабинет</h2>
-
 <p class="sub" data-i="profileSub">Интерактивная демонстрация профиля.</p>
-
 <div class="panel">
-
 <h3>IBR Demo Account</h3>
-
 <div class="balance"><span id="points">1000</span> IBR</div>
-
 <p style="color:#aaa" data-i="virtual">Виртуальные баллы без денежной стоимости.</p>
-
 <button class="btn" onclick="changePoints(100)" data-i="add">+100 баллов</button>
-
 <button class="btn" onclick="changePoints(-100)" data-i="remove">−100 баллов</button>
-
 <p class="notice" data-i="notice">Это локальная демонстрация. Регистрация, настоящие аккаунты, платежи, банковские карты, криптокошельки и реальные сделки не подключены. Не вводите личные или платёжные данные.</p>
-
 </div>
-
 </section>
 
 <footer>
-
 <strong class="gold">IBRATON</strong> — Digital Ecosystem Concept<br>
-
 <span data-i="footer">© 2026 IBRATON. Концептуальный демонстрационный проект.</span>
-
 </footer>
 
 <script>
-
 const translations={
-
 ru:{
-
 home:"Главная",ecosystem:"Экосистема",market:"Market",wallet:"Wallet",account:"Профиль",
-
 headline:'Новая эпоха <span class="gold">цифровых</span> возможностей.',
-
 intro:"IBRATON — концепция универсальной цифровой экосистемы, объединяющей инструменты, технологии и сообщества на одной платформе.",
-
 explore:"Исследовать платформу",ecoTitle:'Экосистема <span class="gold">IBRATON</span>',ecoSub:"Четыре направления единой цифровой среды.",
-
 toolsText:"Цифровые инструменты и полезные сервисы в одном пространстве.",walletText:"Демонстрационный интерфейс виртуального баланса и истории операций.",marketText:"Концепция цифрового каталога и торговой площадки.",connectText:"Идея объединения пользователей и цифровых сообществ.",
-
 marketSub:"Демонстрация будущей торговой площадки.",assetsText:"Каталог цифровых продуктов — демонстрационный раздел.",exchangeText:"Концепция интерфейса обмена виртуальных баллов.",paymentsText:"Идея поддержки разных валют в будущем. Реальные платежи не подключены.",
-
 profileTitle:"Личный кабинет",profileSub:"Интерактивная демонстрация профиля.",virtual:"Виртуальные баллы без денежной стоимости.",add:"+100 баллов",remove:"−100 баллов",
-
 notice:"Это локальная демонстрация. Регистрация, настоящие аккаунты, платежи, банковские карты, криптокошельки и реальные сделки не подключены. Не вводите личные или платёжные данные.",footer:"© 2026 IBRATON. Концептуальный демонстрационный проект."
-
 },
-
 az:{
-
 home:"Ana səhifə",ecosystem:"Ekosistem",market:"Market",wallet:"Wallet",account:"Profil",
-
 headline:'Rəqəmsal <span class="gold">imkanların</span> yeni dövrü.',
-
 intro:"IBRATON — alətləri, texnologiyaları və icmaları vahid platformada birləşdirən universal rəqəmsal ekosistem konsepsiyasıdır.",
-
 explore:"Platformanı araşdır",ecoTitle:'<span class="gold">IBRATON</span> ekosistemi',ecoSub:"Vahid rəqəmsal mühitin dörd istiqaməti.",
-
 toolsText:"Bir məkanda rəqəmsal alətlər və faydalı xidmətlər.",walletText:"Virtual balans və əməliyyat tarixçəsinin nümayiş interfeysi.",marketText:"Rəqəmsal kataloq və ticarət platforması konsepsiyası.",connectText:"İstifadəçiləri və rəqəmsal icmaları birləşdirmək ideyası.",
-
 marketSub:"Gələcək ticarət platformasının nümayişi.",assetsText:"Rəqəmsal məhsullar kataloqu — demo bölməsi.",exchangeText:"Virtual xalların mübadilə interfeysi konsepsiyası.",paymentsText:"Gələcəkdə müxtəlif valyutaların dəstəklənməsi ideyası. Real ödənişlər aktiv deyil.",
-
 profileTitle:"Şəxsi kabinet",profileSub:"Profilin interaktiv nümayişi.",virtual:"Pul dəyəri olmayan virtual xallar.",add:"+100 xal",remove:"−100 xal",
-
 notice:"Bu, yerli nümayişdir. Qeydiyyat, real hesablar, ödənişlər, bank kartları, kripto pul kisələri və real əməliyyatlar qoşulmayıb. Şəxsi və ödəniş məlumatlarını daxil etməyin.",footer:"© 2026 IBRATON. Konseptual nümayiş layihəsi."
-
 },
-
 kk:{
-
 home:"Басты бет",ecosystem:"Экожүйе",market:"Market",wallet:"Wallet",account:"Профиль",
-
 headline:'<span class="gold">Цифрлық</span> мүмкіндіктердің жаңа дәуірі.',
-
 intro:"IBRATON — құралдарды, технологияларды және қауымдастықтарды бір платформада біріктіретін әмбебап цифрлық экожүйе тұжырымдамасы.",
-
 explore:"Платформаны зерттеу",ecoTitle:'<span class="gold">IBRATON</span> экожүйесі',ecoSub:"Біртұтас цифрлық ортаның төрт бағыты.",
-
 toolsText:"Бір кеңістіктегі цифрлық құралдар мен пайдалы қызметтер.",walletText:"Виртуалды баланс пен операциялар тарихының демонстрациялық интерфейсі.",marketText:"Цифрлық каталог пен сауда алаңының тұжырымдамасы.",connectText:"Пайдаланушылар мен цифрлық қауымдастықтарды біріктіру идеясы.",
-
 marketSub:"Болашақ сауда алаңының демонстрациясы.",assetsText:"Цифрлық өнімдер каталогы — демонстрациялық бөлім.",exchangeText:"Виртуалды ұпайларды айырбастау интерфейсінің тұжырымдамасы.",paymentsText:"Болашақта әртүрлі валюталарды қолдау идеясы. Нақты төлемдер қосылмаған.",
-
 profileTitle:"Жеке кабинет",profileSub:"Профильдің интерактивті демонстрациясы.",virtual:"Ақшалай құны жоқ виртуалды ұпайлар.",add:"+100 ұпай",remove:"−100 ұпай",
-
 notice:"Бұл — жергілікті демонстрация. Тіркелу, нақты аккаунттар, төлемдер, банк карталары, крипто әмияндар және нақты мәмілелер қосылмаған. Жеке немесе төлем деректерін енгізбеңіз.",footer:"© 2026 IBRATON. Тұжырымдамалық демонстрациялық жоба."
-
 },
-
 en:{
-
 home:"Home",ecosystem:"Ecosystem",market:"Market",wallet:"Wallet",account:"Profile",
-
 headline:'A new era of <span class="gold">digital</span> possibilities.',
-
 intro:"IBRATON is a universal digital ecosystem concept bringing tools, technology and communities together on one platform.",
-
 explore:"Explore platform",ecoTitle:'<span class="gold">IBRATON</span> Ecosystem',ecoSub:"Four directions of one digital environment.",
-
 toolsText:"Digital tools and useful services in one place.",walletText:"A demo interface for virtual balance and transaction history.",marketText:"A concept for a digital catalog and marketplace.",connectText:"An idea for connecting users and digital communities.",
-
 marketSub:"A preview of a future marketplace.",assetsText:"Digital product catalog — demo section.",exchangeText:"A concept interface for exchanging virtual points.",paymentsText:"A concept for supporting multiple currencies in the future. Real payments are not connected.",
-
 profileTitle:"Personal account",profileSub:"Interactive profile demonstration.",virtual:"Virtual points with no monetary value.",add:"+100 points",remove:"−100 points",
-
 notice:"This is a local demo. Registration, real accounts, payments, bank cards, crypto wallets and real transactions are not connected. Do not enter personal or payment information.",footer:"© 2026 IBRATON. Concept demonstration project."
-
 }
-
 };
-
 function setLanguage(lang){
-
 const dict=translations[lang]||translations.ru;
-
 document.documentElement.lang=lang;
-
 document.querySelectorAll("[data-i]").forEach(el=>{
-
 const key=el.dataset.i;
-
 if(dict[key]) el.innerHTML=dict[key];
-
 });
-
 try{localStorage.setItem("ibraton-language",lang)}catch(e){}
-
 }
-
 document.getElementById("language").addEventListener("change",e=>setLanguage(e.target.value));
-
 let points=1000;
-
 function changePoints(amount){
-
 points=Math.max(0,points+amount);
-
 document.getElementById("points").textContent=points;
-
 }
-
 let saved="ru";
-
 try{saved=localStorage.getItem("ibraton-language")||"ru"}catch(e){}
-
 document.getElementById("language").value=saved;
-
 setLanguage(saved);
-
 </script>
-
 </body>
-
 </html>
