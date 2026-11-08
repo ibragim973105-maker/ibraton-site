@@ -1,0 +1,121 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>IBRATON — Digital Ecosystem</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:#090a0d;color:#f5f2eb;font-family:Arial,sans-serif}
+header{padding:20px;border-bottom:1px solid #393124;background:#101116}
+nav{max-width:1100px;margin:auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:15px}
+.logo{font-size:27px;font-weight:900;color:#dfbd76;letter-spacing:3px}
+nav a{color:white;text-decoration:none;margin:8px;font-size:14px}
+.hero{max-width:1100px;margin:auto;padding:85px 22px}
+.gold{color:#dfbd76}
+.tag{color:#dfbd76;letter-spacing:4px;font-size:12px}
+h1{font-size:clamp(40px,8vw,75px);margin:22px 0}
+p{color:#aeb1ba;line-height:1.7}
+.btn{display:inline-block;padding:14px 22px;border:0;border-radius:9px;background:#dfbd76;color:#17130b;font-weight:bold;cursor:pointer;text-decoration:none}
+.btn2{background:#242832;color:white;border:1px solid #4b4538}
+section{max-width:1100px;margin:auto;padding:35px 22px 55px}
+h2{font-size:30px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:25px}
+.card{padding:23px;border:1px solid #393124;border-radius:15px;background:linear-gradient(145deg,#191b21,#101116)}
+.card h3{color:#dfbd76}
+.panel{padding:25px;border:1px solid #80683b;border-radius:17px;background:#15151a;margin-top:20px}
+.balance{font-size:32px;color:#dfbd76;font-weight:bold;margin:20px 0}
+.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px}
+.pill{display:inline-block;border:1px solid #66532e;border-radius:30px;padding:8px 12px;color:#dfbd76;margin:4px;font-size:12px}
+.notice{background:#211e18;border-left:3px solid #dfbd76;padding:13px;margin-top:20px;color:#d7cbb3;font-size:13px}
+#message{color:#dfbd76;min-height:25px}
+footer{text-align:center;padding:30px;border-top:1px solid #393124;color:#777;font-size:13px}
+</style>
+</head>
+<body>
+<header>
+<nav>
+<div class="logo">IBRATON</div>
+<div>
+<a href="#about">О проекте</a>
+<a href="#services">Разделы</a>
+<a href="#account">Кабинет</a>
+</div>
+</nav>
+</header>
+
+<div class="hero">
+<div class="tag">UNIVERSAL DIGITAL ECOSYSTEM</div>
+<h1>Будущее начинается <span class="gold">здесь.</span></h1>
+<p>IBRATON — концепция единой цифровой экосистемы. Современные инструменты, сервисы и технологии в одном пространстве.</p>
+<a class="btn" href="#account">Открыть демо-кабинет</a>
+</div>
+
+<section id="about">
+<h2>О <span class="gold">IBRATON</span></h2>
+<p>Наша идея — объединить цифровые возможности в удобной и современной платформе. Мы создаём пространство, которое будет развиваться вместе с технологиями.</p>
+</section>
+
+<section id="services">
+<h2>Экосистема IBRATON</h2>
+<div class="grid">
+<div class="card"><h3>IBR Tools</h3><p>Цифровые инструменты и полезные сервисы.</p></div>
+<div class="card"><h3>IBR Wallet</h3><p>Концепция личного кабинета и учебного баланса.</p></div>
+<div class="card"><h3>IBR Market</h3><p>Демонстрация каталога и виртуальных обменов.</p></div>
+<div class="card"><h3>IBR Connect</h3><p>Общение и взаимодействие пользователей.</p></div>
+</div>
+</section>
+
+<section id="account">
+<h2>Личный кабинет</h2>
+<p>Попробуй демонстрационные возможности IBRATON.</p>
+<div class="panel">
+<div class="tag">DEMO ACCOUNT</div>
+<h3>Добро пожаловать, гость!</h3>
+<p>Тестовый профиль</p>
+<div class="balance" id="balance">1 000 баллов</div>
+<div>
+<span class="pill">RUB · макет</span>
+<span class="pill">USD · макет</span>
+<span class="pill">KZT · макет</span>
+<span class="pill">AZN · макет</span>
+<span class="pill">USDT · не подключён</span>
+</div>
+<div class="actions">
+<button class="btn" onclick="change(100)">+100 баллов</button>
+<button class="btn btn2" onclick="change(-100)">−100 баллов</button>
+<button class="btn btn2" onclick="resetDemo()">Сбросить</button>
+</div>
+<p id="message"></p>
+<div class="notice">
+Демонстрационный режим. Настоящая регистрация, авторизация, банковские карты, платежи, криптокошельки и торговля не подключены. Баллы учебные и не имеют денежной стоимости. Не вводите пароли, данные карт или секретные фразы.
+</div>
+</div>
+</section>
+
+<footer>
+IBRATON © 2026 · Digital Ecosystem · Demo Version
+</footer>
+
+<script>
+let points=1000;
+function render(){
+document.getElementById("balance").textContent=
+points.toLocaleString("ru-RU")+" баллов";
+}
+function change(value){
+points=Math.max(0,points+value);
+render();
+document.getElementById("message").textContent=
+"Демо-баланс обновлён.";
+}
+function resetDemo(){
+points=1000;
+render();
+document.getElementById("message").textContent=
+"Баланс восстановлен.";
+}
+</script>
+</body>
+</html>
